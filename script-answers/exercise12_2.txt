@@ -1,0 +1,16 @@
+Script started on 2022-09-06 14:52:43+03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="120" LINES="30"]
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+]0;kahukas@DESKTOP-OJF6RLO: ~[01;32mkahukas@DESKTOP-OJF6RLO[00m:[01;34m~[00m$ exitdocker container run -it ubuntu bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kdocker container run -it ubuntu bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kplorer.exe .ls[Knano typescriptls[Kexplorer.exe .it[Kdocker container run -it ubuntu bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K[Kexitdocker container run -it ubuntu bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kdocker container run -it ubuntu bash
+[?2004h]0;root@a17a407596ce: /root@a17a407596ce:/# [K]0;root@a17a407596ce: /root@a17a407596ce:/# mkdir /usr/src/app
+[?2004l[?2004h]0;root@a17a407596ce: /root@a17a407596ce:/# cd /usr/src/app
+[?2004l[?2004h]0;root@a17a407596ce: /usr/src/approot@a17a407596ce:/usr/src/app# touch index.js
+[?2004l[?2004h]0;root@a17a407596ce: /usr/src/approot@a17a407596ce:/usr/src/app# ls
+[?2004lindex.js
+[?2004h]0;root@a17a407596ce: /usr/src/approot@a17a407596ce:/usr/src/app# exit
+[?2004lexit
+]0;kahukas@DESKTOP-OJF6RLO: ~[01;32mkahukas@DESKTOP-OJF6RLO[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2022-09-06 14:53:50+03:00 [COMMAND_EXIT_CODE="0"]
