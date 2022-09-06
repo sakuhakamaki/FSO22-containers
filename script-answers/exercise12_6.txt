@@ -1,0 +1,29 @@
+Script started on 2022-09-06 17:59:44+03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="120" LINES="30"]
+]0;kahukas@DESKTOP-OJF6RLO: ~/FSO22-containers/todo-backend[01;32mkahukas@DESKTOP-OJF6RLO[00m:[01;34m~/FSO22-containers/todo-backend[00m$ exitdocker build -t todo-backend . && docker run -it -p 3000:3000 todo-backend[A]0;kahukas@DESKTOP-OJF6RLO: ~/FSO22-containers/todo-backend[01;32mkahukas@DESKTOP-OJF6RLO[00m:[01;34m~/FSO22-containers/todo-backend[00m$ exit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker-compose up
+Starting todo-backend_todo-backend_1 ... 
+[1A[2KStarting todo-backend_todo-backend_1 ... [32mdone[0m[1BAttaching to todo-backend_todo-backend_1
+[36mtodo-backend_1  |[0m 
+[36mtodo-backend_1  |[0m > todo-express-backend@0.0.0 start
+[36mtodo-backend_1  |[0m > node ./bin/www
+[36mtodo-backend_1  |[0m 
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m1.298 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.339 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.222 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.435 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.162 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.169 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.168 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.225 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.182 ms - 12[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.420 ms - 13[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.255 ms - 13[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.342 ms - 13[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.253 ms - 13[0m
+[36mtodo-backend_1  |[0m [0mGET / [32m200 [0m0.300 ms - 13[0m
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping todo-backend_todo-backend_1 ... 
+[1A[2KStopping todo-backend_todo-backend_1 ... [32mdone[0m[1B]0;kahukas@DESKTOP-OJF6RLO: ~/FSO22-containers/todo-backend[01;32mkahukas@DESKTOP-OJF6RLO[00m:[01;34m~/FSO22-containers/todo-backend[00m$ exit
+exit
+
+Script done on 2022-09-06 18:01:05+03:00 [COMMAND_EXIT_CODE="0"]
