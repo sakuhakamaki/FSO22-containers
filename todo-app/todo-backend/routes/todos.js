@@ -18,10 +18,14 @@ router.post('/', async (req, res) => {
   })
 
   const oldTodoCount = await redis.getAsync('added_todos')
+  if (oldTodoCount === null) {
+    await redis.setAsync('added_todos', 1)
+  }
+  else {
+    const newTodoCount = parseInt(oldTodoCount) + 1
 
-  const newTodoCount = parseInt(oldTodoCount) + 1
-
-  await redis.setAsync('added_todos', newTodoCount)
+    await redis.setAsync('added_todos', newTodoCount)
+  }
 
   res.send(todo);
 });
