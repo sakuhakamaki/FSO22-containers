@@ -62,6 +62,7 @@ typings/
 
 # Data of MongoDB
 data/db
+mongo_data
 
 # Redis data
 redis_data/
