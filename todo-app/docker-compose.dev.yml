@@ -5,17 +5,22 @@ services:
       context: ./todo-frontend
       dockerfile: dev.Dockerfile
     volumes:
-      - /todo-frontend:/usr/src/app
+      - ./todo-frontend:/usr/src/app
     ports:
       - 3000:3000
-    container_name: hello-front-dev
+    container_name: frontend-dev
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080/api
+    depends_on:
+      - backend-dev
   
   backend-dev:
     build:
       context: ./todo-backend
       dockerfile: dev.Dockerfile
     volumes:
-      - ./todo-backend:/usr/src/app
+      - ./todo-backend/:/usr/src/app
+    container_name: backend-dev
     ports:
       - 3001:3001
     environment: 
@@ -34,8 +39,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: the_database
     volumes:
-      - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
-      - ./mongo_data:/data/db
+      - ./todo-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - ./todo-backend/mongo_data:/data/db
 
   redis:
     image: redis
@@ -43,7 +48,7 @@ services:
       - 6379:6379
     command: ['redis-server', '--appendonly', 'yes'] # Overwrite the CMD
     volumes: # Declare the volume
-      - ./redis_data:/data
+      - ./todo-backend/redis_data:/data
 
   nginx:
     image: nginx:1.20.1
