@@ -4,9 +4,11 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN npm ci
+RUN npm ci --production
 
-ENV REACT_APP_BACKEND_URL="http://localhost:3001"
+ARG REACT_APP_BACKEND_URL
+
+ENV REACT_APP_BACKEND_URL=$REACT_APP_BACKEND_URL
 
 RUN npm run build
 
