@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  blog-app-front-dev:
+    build:
+      context: ./frontend
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3000:3000
+    container_name: blog-app-front-dev
+    depends_on:
+      - blog-app-back-dev
+  
+  blog-app-back-dev:
+    build:
+      context: ./backend
+      dockerfile: dev.Dockerfile
+    container_name: blog-app-back-dev
+    ports:
+      - 3003:3003
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - SECRET=${SECRET}
+
+# Use docker-compose with command
+# "docker-compose -f docker-compose.dev.yml --env-file .env up -d --build"
