@@ -1,0 +1,40 @@
+services:
+  blog-app-front:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_BACKEND_URL=//localhost:3003
+    ports:
+      - 3000:80
+    container_name: frontend
+    depends_on:
+      - blog-app-back
+  
+  blog-app-back:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 3003:3003
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - SECRET=${SECRET}
+    container_name: blog-app-back
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf.d:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    environment:
+      - FRONTEND_PROXY=http://frontend:80/
+      - BACKEND_PROXY=http://backend:3001/
+    depends_on:
+      - blog-app-front
+      - blog-app-back
+
+# Use docker-compose with command
+# "docker-compose -f docker-compose.yml up -d --build"

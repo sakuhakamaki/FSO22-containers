@@ -196,7 +196,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>test</h1>
+      <h1>Blogs-application</h1>
       <SuccessNotification message={successMessage} />
       <ErrorNotification message={errorMessage} />
 
